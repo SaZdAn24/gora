@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    position: relative;
+}
+
+.main-text, .sub-text {
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 3s forwards;
+}
+
+.main-text {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.sub-text {
+    font-size: 18px;
+    margin-top: 20px;
+    animation-delay: 1s;
+}
+
+/* Стиль для горы */
+.mountain {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: drawMountain 4s forwards;
+}
+
+.mountain .peak1, .mountain .peak2, .mountain .base {
+    background-color: #333;
+    position: absolute;
+    opacity: 0;
+}
+
+.mountain .peak1 {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid #333;
+    top: 0;
+    animation: drawPeak1 4s forwards;
+}
+
+.mountain .peak2 {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 60px solid #333;
+    top: 40px;
+    animation: drawPeak2 4s forwards;
+}
+
+.mountain .base {
+    width: 0;
+    height: 10px;
+    background-color: #333;
+    top: 100px;
+    animation: drawBase 4s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes drawMountain {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes drawPeak1 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes drawPeak2 {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+    }
+    100% {
+        width: 60px;
+        height: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes drawBase {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    50% {
+        width: 80px;
+        opacity: 1;
+    }
+    100% {
+        width: 120px;
+        opacity: 1;
+    }
+}

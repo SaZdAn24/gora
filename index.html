@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт церкви Gora Church. Мы строим место, которое вдохновляет и соединяет людей с Богом.">
+    <meta name="keywords" content="церковь, Gora Church, вера, религия, вдохновение">
+    <meta name="author" content="Gora Church Team">
+    <title>Gora Church</title>
+    <link rel="icon" href="imeges/gora.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .mountain-line {
+            stroke-dasharray: 400;
+            stroke-dashoffset: 400;
+            animation: draw 2s forwards;
+        }
+
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        .text-wrapper {
+            text-align: center;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 1s 0.5s forwards; /* Уменьшил задержку до 1.5 секунд */
+        }
+
+        .main-text {
+            font-size: 2em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .sub-text {
+            font-size: 1.2em;
+            font-weight: 400;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg width="500" height="200" viewBox="0 0 500 200">
+        <polyline points="10,150 80,50 150,150" class="mountain-line" stroke="black" stroke-width="4" fill="none" />
+        <polyline points="130,150 200,20 270,150" class="mountain-line" stroke="black" stroke-width="4" fill="none" />
+        <polyline points="250,150 300,60 350,150" class="mountain-line" stroke="black" stroke-width="4" fill="none" />
+    </svg>
+
+    <div class="text-wrapper">
+        <h1 class="main-text">Добро пожаловать в церковь "Гора"!</h1>
+        <p class="sub-text">Мы готовим для вас что-то особенное. Сайт находится на стадии разработки, и скоро мы откроем для вас новые возможности для общения и духовного роста. Благодарим за терпение, оставайтесь с нами!</p>
+    </div>
+</body>
+</html>
